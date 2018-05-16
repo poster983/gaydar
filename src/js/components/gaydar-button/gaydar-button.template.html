@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+  id="radar" 
+  width$="[[width]]" 
+  height$="[[height]]" 
+  viewBox="0 0 138.311 138.311" 
+  on-mousedown="_touchStart"
+  on-touchstart="_touchStart"
+  on-touchend="_touchEnd"
+  on-mouseup="_touchEnd"
+  >
+    <defs id="defs2">
+      <linearGradient id="darkColor">
+        <stop id="darkColorOuter" offset="0" stop-color="#c0392b"/>
+        <stop id="darkColorMiddle" offset=".9" stop-color="#c0392b" stop-opacity=".651"/>
+        <stop id="darkColorInner" offset="1" stop-color="#c0392b" stop-opacity="0"/>
+      </linearGradient>
+      <linearGradient id="primaryColor">
+        <stop id="primaryColorInner" offset="0" stop-color="#ff0008"/>
+        <stop id="primaryColorOuter" offset="1" stop-color="#ff0008" stop-opacity="0"/>
+      </linearGradient>
+      <filter id="filter7983" width="1.24" height="1.24" x="-.12" y="-.12" color-interpolation-filters="sRGB">
+        <feGaussianBlur id="feGaussianBlur7985" stdDeviation="6.783"/>
+      </filter>
+      <radialGradient id="radialGradient859" cx="69.156" cy="227.844" r="84.112" fx="69.156" fy="227.844" gradientUnits="userSpaceOnUse" xlink:href="#primaryColor"/>
+      <linearGradient id="linearGradient1923" x1="-14.083" x2="-86.117" y1="223.563" y2="223.563" gradientTransform="translate(151.09 4.278)" gradientUnits="userSpaceOnUse" xlink:href="#darkColor"/>
+    </defs>
+    <g id="layer1" stroke-linejoin="round" transform="translate(0 -158.689)">
+      <circle id="outerRing" cx="69.156" cy="227.844" r="68.494" fill="#e74c3c" stroke="#ecf0f1" stroke-opacity=".996" stroke-width="1.323"/>
+      <circle id="centerPrimaryGradient" cx="69.156" cy="227.844" r="67.832" fill="url(#radialGradient859)" stroke-opacity=".996" stroke-width="1.31" filter="url(#filter7983)" transform="translate(32.398 106.74) scale(.53152)"/>
+      <circle id="darkShadow" cx="69.155" cy="227.845" r="67.832" fill="url(#linearGradient1923)" stroke-opacity=".996" stroke-width="1.31"/>
+      <ellipse id="middleRing" cx="69.156" cy="227.844" fill="none" stroke="#ecf0f1" stroke-opacity=".485" stroke-width="1.323" rx="49.633" ry="49.633"/>
+      <circle id="innerRing" cx="69.156" cy="227.844" r="29.605" fill="none" stroke="#ecf0f1" stroke-opacity=".776" stroke-width="1.323"/>
+      <circle id="center" cx="69.156" cy="227.844" r="7.905" fill="#ecf0f1" stroke-opacity=".485" stroke-width="2.677"/>
+      <path id="stick" fill="#ecf0f1" stroke-opacity=".485" stroke-width="1.523" d="M67.851 159.141h2.608v68.372h-2.608z"/>
+    </g>
+  </svg>

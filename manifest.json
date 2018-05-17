@@ -1,7 +1,7 @@
 {
     "name": "Gaydar™",
     "short_name": "Gaydar",
-    "theme_color": "#9c27b0",
+    "theme_color": "#212121",
     "background_color": "#212121",
     "display": "standalone",
     "orientation": "portrait",

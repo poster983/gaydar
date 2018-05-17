@@ -30,9 +30,9 @@ class GaydarButton extends PolymerElement {
         /** PASSIVE RADAR SPIN */
         this.radarSpinAnimation = anime.timeline({
             loop: true,
-            duration: 9000,
+            duration: this.radarSpeed,
             update: (anim) => {
-              
+              this._passiveTime = Math.round(anim.currentTime);
               if((Math.round(anim.currentTime)%(anim.duration/this.brightColors.length)) === 0) {
                let index = Math.round(anim.currentTime)/(anim.duration/this.brightColors.length);
                this.changeColor(index===0?this.brightColors.length-1:index-1);
@@ -85,6 +85,11 @@ class GaydarButton extends PolymerElement {
                 type: Number,
                 value: 100,
             },
+            radarSpeed: {
+                type: Number,
+                value: 6000,
+                observer: "_radarSpeedChanged"
+            },
             brightColors: {
                 type: Array,
                 value: ["#e67e22", "#f1c40f", "#2ecc71", "#3498db", "#9b59b6", "#e74c3c"]
@@ -97,6 +102,11 @@ class GaydarButton extends PolymerElement {
                 type: Array,
                 value: ["#ffb600", "#ffff00", "#00ff6a", "#0000ff", "#f600ff", "#ff0000"]
             },
+        }
+    }
+    _radarSpeedChanged() {
+        if(this.radarSpinAnimation) { //make sure animation is initialized
+            this.radarSpinAnimation.duration = this.radarSpeed;
         }
     }
     /**UTILS */

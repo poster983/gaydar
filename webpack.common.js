@@ -9,8 +9,8 @@ module.exports = {
         app: path.resolve(__dirname, "src", "js", "app.js")
     },
     output: {
-        path: path.resolve(__dirname, "dist",), //__dirname + "/public/js/webpack"
-        filename: "[name].js",
+        path: path.resolve(__dirname, "dist"), //__dirname + "/public/js/webpack"
+        filename: "js/[name].js",
         publicPath: "./dist/",
     },
     module: {
@@ -26,7 +26,7 @@ module.exports = {
         new CopyWebpackPlugin([
             {
                 from: "./node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js",
-                to: path.resolve(__dirname, "dist") //"polyfill/webcomponents-lite.js"
+                to: path.resolve(__dirname, "dist", "js") //"polyfill/webcomponents-lite.js"
             },
         ]),
         //workbox service worker 
@@ -37,7 +37,9 @@ module.exports = {
             globDirectory: ".",
             globPatterns: [
                 //"**/*.{css,woff2,html}"
-                "index.html"
+                "index.html",
+                "./src/styles/*.css",
+                "./src/sounds/*.{mp3,ogg}"
             ],
         }),
         new CleanWebpackPlugin([

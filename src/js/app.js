@@ -23,11 +23,40 @@ import "@polymer/paper-button/paper-button.js";
 import '@polymer/paper-styles/typography.js';
 import "../styles/default-theme.js";
 
+/** REQUIRE MODULES */
+import GaydarSound from "./GaydarSound.js";
+
+/** GLOBALS */
+let gaydarSound = new GaydarSound();
+let gaydar = document.getElementById("mainGaydar");
+
+/*document.addEventListener("DOMContentLoaded", function(event) { 
+    //load up the 
+});  */
 
 
+/** GAYDAR Button Click stuff */
 
-
-
+//listen for click on 
+gaydar.addEventListener("mousedown", eventPlaySound);
+gaydar.addEventListener("touchstart", eventPlaySound);
+function eventPlaySound(e) {
+    e.preventDefault();
+    gaydarSound.play(true);
+}
+//listen for click off
+gaydar.addEventListener("mouseup", eventStopSound);
+gaydar.addEventListener("touchend", eventStopSound);
+function eventStopSound(e) {
+    e.preventDefault();
+    if(gaydarSound.loopCount === 0) {
+        gaydarSound.stop(true);
+    } else {
+        gaydarSound.stop();
+    }
+    
+    
+}
 
 //SERVICE WORKER
 

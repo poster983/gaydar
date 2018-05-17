@@ -1,0 +1,31 @@
+/** TABLE OF CONTENTS
+- (01) SINGLE ELEMENTS
+- (02) FLEXBOX
+
+*/
+/** (01) SINGLE ELEMENTS */
+body {
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+}
+
+/** (02) FLEXBOX */
+.Aligner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.Aligner.full-height {
+    height: 100%;
+}
+.Aligner-item {
+    max-width: 50%;
+}
+
+.Aligner-item--top {
+    align-self: flex-start;
+}
+
+.Aligner-item--bottom {
+    align-self: flex-end;
+}

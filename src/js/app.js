@@ -110,7 +110,7 @@ function onNewServiceWorker(registration, callback) {
 }
 
 window.addEventListener("load", function() {
-    navigator.serviceWorker.register("/sw.js")
+    navigator.serviceWorker.register("./sw.js")
         .then(function (registration) {
             // Track updates to the Service Worker.
             if (!navigator.serviceWorker.controller) {

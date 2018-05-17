@@ -110,7 +110,7 @@ function onNewServiceWorker(registration, callback) {
 }
 
 window.addEventListener("load", function() {
-    navigator.serviceWorker.register("./sw.js")
+    navigator.serviceWorker.register("./sw.js", {scope: (process.env.NODE_ENV === "production")?"/gaydar/":"/"})
         .then(function (registration) {
             // Track updates to the Service Worker.
             if (!navigator.serviceWorker.controller) {

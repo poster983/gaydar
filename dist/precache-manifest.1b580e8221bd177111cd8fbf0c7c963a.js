@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "./dist/js/webcomponents-bundle.js"
   },
   {
-    "revision": "a9d0cf2740504026f4e0",
+    "revision": "381bccc744b897230c54",
     "url": "./dist/js/app.js"
   }
 ];

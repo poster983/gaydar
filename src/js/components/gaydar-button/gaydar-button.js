@@ -32,7 +32,6 @@ class GaydarButton extends PolymerElement {
             loop: true,
             duration: this.radarSpeed,
             update: (anim) => {
-              this._passiveTime = Math.round(anim.currentTime);
               if((Math.round(anim.currentTime)%(anim.duration/this.brightColors.length)) === 0) {
                let index = Math.round(anim.currentTime)/(anim.duration/this.brightColors.length);
                this.changeColor(index===0?this.brightColors.length-1:index-1);

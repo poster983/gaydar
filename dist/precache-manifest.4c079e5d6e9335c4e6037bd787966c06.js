@@ -8,7 +8,7 @@ self.__precacheManifest = [
     "url": "src/sounds/grindr.ogg"
   },
   {
-    "revision": "6ac5a6f54bf449955f9b423455634d19",
+    "revision": "24076ebf7d9f182476847d98b2792451",
     "url": "index.html"
   },
   {

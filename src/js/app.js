@@ -65,10 +65,10 @@ function showRefreshUI(registration) {
     let paperTooltip = document.createElement("paper-toast");
     paperTooltip.opened = true;
     paperTooltip.duration = 0;
-    paperTooltip.text = "There is a new version of the Gaydar avalable"
-    let updateButton = document.createElement("paper-button")
+    paperTooltip.text = "There is a new version of the Gaydar avalable";
+    let updateButton = document.createElement("paper-button");
     //updateButton.style.color = "var("
-    updateButton.innerHTML = "Update!"
+    updateButton.innerHTML = "Update";
     updateButton.addEventListener("click", (e) => {
         if (!registration.waiting) {
             // Just to ensure registration.waiting is available before

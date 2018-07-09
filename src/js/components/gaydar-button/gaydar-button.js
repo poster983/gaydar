@@ -156,7 +156,7 @@ class GaydarButton extends PolymerElement {
         
         //loop and make all the timeout callbacks 
         for(let t = 0; t < this.brightColors.length; t++) {
-            console.log((druation/this.brightColors.length)* t, t)
+            //console.log((druation/this.brightColors.length)* t, t)
             setTimeout(() => {
                 //console.log(t)
                 this.changeColor(t);

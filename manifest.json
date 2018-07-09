@@ -6,7 +6,7 @@
     "display": "standalone",
     "orientation": "portrait",
     "scope": "./gaydar",
-    "start_url": "./gaydar",
+    "start_url": "/",
     "icons": [
         {
           "src": "src/images/icons/icon-72x72.png",

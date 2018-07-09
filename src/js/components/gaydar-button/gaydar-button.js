@@ -32,11 +32,17 @@ class GaydarButton extends PolymerElement {
             loop: true,
             duration: this.radarSpeed,
             update: (anim) => {
-              if((Math.round(anim.currentTime)%(anim.duration/this.brightColors.length)) === 0) {
+                //let diff = anim.duration/this.brightColors.length;
+
+              /*if((Math.round(anim.currentTime)%(anim.duration/this.brightColors.length)) === 0) { //issue is here where anim.currentTime is not consistant 
                let index = Math.round(anim.currentTime)/(anim.duration/this.brightColors.length);
                this.changeColor(index===0?this.brightColors.length-1:index-1);
+              }*/ 
+              if(Math.round(anim.progress) == 0) {
+                this._colorChangeLoop(anim.duration);
               }
             }
+
           }).add({
               targets: this.shadowRoot.querySelector("#stick"),
               rotate: 360,
@@ -76,14 +82,6 @@ class GaydarButton extends PolymerElement {
       }
     static get properties() {
         return { 
-            width: {
-                type: Number,
-                value: 100,
-            },
-            height: {
-                type: Number,
-                value: 100,
-            },
             radarSpeed: {
                 type: Number,
                 value: 6000,
@@ -91,15 +89,15 @@ class GaydarButton extends PolymerElement {
             },
             brightColors: {
                 type: Array,
-                value: ["#e67e22", "#f1c40f", "#2ecc71", "#3498db", "#9b59b6", "#e74c3c"]
+                value: ["#e74c3c", "#e67e22", "#f1c40f", "#2ecc71", "#3498db", "#9b59b6" ]
             },
             darkColors: {
                 type: Array,
-                value: ["#d35400", "#f39c12", "#27ae60", "#2980b9", "#8e44ad", "#c0392b"]
+                value: ["#c0392b", "#d35400", "#f39c12", "#27ae60", "#2980b9", "#8e44ad" ]
             },
             centerColors: {
                 type: Array,
-                value: ["#ffb600", "#ffff00", "#00ff6a", "#0000ff", "#f600ff", "#ff0000"]
+                value: ["#ff0000", "#ffb600", "#ffff00", "#00ff6a", "#0000ff", "#f600ff" ]
             },
         }
     }
@@ -148,6 +146,26 @@ class GaydarButton extends PolymerElement {
         //console.log(e)
         e.preventDefault();
         this.touchAnimation.reverse();
+    }
+
+    _colorChangeLoop(druation) {
+        if(this._colorChangeLoopRun) {
+            return;
+        }
+        this._colorChangeLoopRun = true;
+        
+        //loop and make all the timeout callbacks 
+        for(let t = 0; t < this.brightColors.length; t++) {
+            console.log((druation/this.brightColors.length)* t, t)
+            setTimeout(() => {
+                //console.log(t)
+                this.changeColor(t);
+                if(t >= this.brightColors.length-1) { //end one
+                    this._colorChangeLoopRun = false
+                }
+            }, (druation/this.brightColors.length)* t)
+        }
+        
     }
 }
 

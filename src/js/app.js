@@ -57,7 +57,7 @@ function eventStopSound(e) {
     
     
 }
-
+console.log("hi")
 //SERVICE WORKER
 
 //Ask user to refresh page if there is a new version avalable

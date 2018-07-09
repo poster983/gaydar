@@ -1,6 +1,6 @@
 self.__precacheManifest = [
   {
-    "revision": "f46cd5595e2a34844debdc31b9f69dc3",
+    "revision": "e2c57535d38123494bd2fa7c37f599d4",
     "url": "src/styles/app.css"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = [
     "url": "src/sounds/grindr.ogg"
   },
   {
-    "revision": "147042e32410d7e416223d51aef93f4d",
+    "revision": "e1af059965755cea6f216c810a431f04",
     "url": "index.html"
   },
   {
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "./dist/js/webcomponents-bundle.js"
   },
   {
-    "revision": "476713e39ddd27d9a09a",
+    "revision": "f8bdf804280c1499efca",
     "url": "./dist/js/app.js"
   }
 ];

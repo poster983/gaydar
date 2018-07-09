@@ -138,14 +138,13 @@ class GaydarButton extends PolymerElement {
     }
 
     _touchStart(e) {
-        //console.log(e)
         e.preventDefault();
         this.touchAnimation.restart();
     }
     _touchEnd(e) {
-        //console.log(e)
         e.preventDefault();
         this.touchAnimation.reverse();
+        this.touchAnimation.play();
     }
 
     _colorChangeLoop(druation) {

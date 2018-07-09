@@ -36,7 +36,7 @@ export default class GaydarSound {
             this._dontLoopWorkArround = false;
             this._sound.addEventListener('ended', (e) => {
                 if(!this._dontLoopWorkArround) {
-                    console.log(e)
+                    //console.log(e)
                     this._sound.play();
                     this._loopCount++;
                 }

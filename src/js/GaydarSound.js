@@ -19,7 +19,7 @@ TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 
 export default class GaydarSound {
     constructor(defaultURL) {
-        this.sound = defaultURL?defaultURL:window.location.origin+"/src/sounds/grindr.mp3";
+        this.sound = defaultURL?defaultURL:"./src/sounds/grindr.mp3";
     }
     set sound(soundURL) {
         this._sound = new Audio(soundURL);

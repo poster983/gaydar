@@ -61,3 +61,5 @@ typings/
 .next
 
 *.code-workspace
+
+src/\.DS_Store

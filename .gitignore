@@ -67,3 +67,5 @@ src/\.DS_Store
 src/images/\.DS_Store
 
 src/sounds/\.DS_Store
+
+\.DS_Store

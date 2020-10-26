@@ -8,6 +8,7 @@ body {
     background-color: var(--primary-background-color);
     color: var(--primary-text-color);
     min-height: calc(100vh - 16px);
+    overflow: hidden;
 }
 
 #mainGaydar {
@@ -34,4 +35,10 @@ body {
 
 .Aligner-item--bottom {
     align-self: flex-end;
+}
+
+.donate {
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
 }
